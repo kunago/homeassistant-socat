@@ -48,3 +48,7 @@ Where socat should connect to - will be used as tcp://192.168.5.5:7676
 **SOCAT_ZWAVE_LINK**="/dev/zwave"
 
 What the zwave device should be mapped to. Use this in your home assistant configuration file.
+
+# Note
+
+This repository is at this point only a plain copy of the forked one, created by vladbabii.
