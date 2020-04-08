@@ -1,8 +1,8 @@
 # Home Assistant with socat for remote zwave
 
-Based on [homeassistant-home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) image, [published on docker hub](https://hub.docker.com/r/vladbabii/homeassistant-socat/).
+Based on [homeassistant-home-assistant](https://hub.docker.com/r/homeassistant/home-assistant/) image, [published on docker hub](https://hub.docker.com/r/kunago/homeassistant-socat/).
 
-Please [report issues on github](https://github.com/vladbabii/homeassistant-socat/issues).
+Please [report issues on github](https://github.com/kunago/homeassistant-socat/issues).
 
 Instead of using a locally-connected zwave device (usb stick/etc), we can use a serial device mapped over the network with ser2net and then map it to a local zwave serial device with socat.
 
@@ -51,4 +51,4 @@ What the zwave device should be mapped to. Use this in your home assistant confi
 
 # Note
 
-This repository is at this point only a plain copy of the forked one, created by vladbabii.
+This repository is at this point only a plain copy of the forked one, created by vladbabii and forked by kunago.
