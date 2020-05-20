@@ -1,4 +1,4 @@
-FROM "homeassistant/home-assistant:0.109.6"
+FROM "homeassistant/home-assistant:0.110.0"
 LABEL maintainer="kunago"
 
 RUN mkdir /runwatch
