@@ -25,7 +25,7 @@ All  [homeassistant-home-assistant](https://hub.docker.com/r/homeassistant/home-
 **SOCAT_ZWAVE_LINK**="/dev/zwave" (What the zwave device should be mapped to. Use this in your home assistant configuration file.)
 
 # Version:
-Current Home Assistant version: 0.111.0.
+Current Home Assistant version: 0.111.3.
 
 # Note:
 This repository is at this point only a plain copy of the forked one, created by vladbabii and forked by kunago.
