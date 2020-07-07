@@ -26,37 +26,37 @@ fi
 case $CMD in
 
 describe)
-    echo "Sleep $PARAMS"
-    ;;
+  echo "Sleep $PARAMS"
+  ;;
 
 ## exit 0 = is not running
 ## exit 1 = is running
 is-running)
-    if pgrep -f "$BINARY $PARAMS" >/dev/null 2>&1 ; then
-        exit 1
-    fi
-    # stop home assistant if socat is not running 
-    if pgrep -f "python -m homeassistant" >/dev/null 2>&1 ; then
-        echo "stopping home assistant since socat is not running"
-        kill -9 $(pgrep -f "python -m homeassistant")
-    fi
-    exit 0
-    ;;
+  if pgrep -f "$BINARY $PARAMS" >/dev/null 2>&1 ; then
+    exit 1
+  fi
+  # stop home assistant if socat is not running
+  if pgrep -f "python -m homeassistant" >/dev/null 2>&1 ; then
+    echo "stopping home assistant since socat is not running"
+    kill -9 $(pgrep -f "python -m homeassistant")
+  fi
+  exit 0
+  ;;
 
 start)
-    echo "Starting... $BINARY $PARAMS" >> "$LOG_FILE"
-    $BINARY $PARAMS 2>$LOG_FILE >$LOG_FILE &
-    # delay other checks for 5 seconds
-    sleep 5
-    ;;
+  echo "Starting... $BINARY $PARAMS" >> "$LOG_FILE"
+  $BINARY $PARAMS 2>$LOG_FILE >$LOG_FILE &
+  # delay other checks for 5 seconds
+  sleep 5
+  ;;
 
 start-fail)
-    echo "Start failed! $BINARY $PARAMS"
-    ;;
+  echo "Start failed! $BINARY $PARAMS"
+  ;;
 
 stop)
-    echo "Stopping... $BINARY $PARAMS"
-    kill -9 $(pgrep -f "$BINARY $PARAMS")
-    ;;
+  echo "Stopping... $BINARY $PARAMS"
+  kill -9 $(pgrep -f "$BINARY $PARAMS")
+  ;;
 
 esac
