@@ -12,6 +12,8 @@ fi
 
 BINARY="socat"
 PARAMS="${INT_SOCAT_LOG}-d -d -d pty,link=${SOCAT_ZWAVE_LINK},raw,user=root,mode=777 ${SOCAT_ZWAVE_TYPE}:${SOCAT_ZWAVE_HOST}:${SOCAT_ZWAVE_PORT}"
+# on the other side one can use this:   socat -d -d -d pty,link=/dev/ttyACM0,raw,echo=0 tcp-listen:${SOCAT_ZWAVE_PORT},reuseaddr
+# in order to put it in cron, use this: if [ $(ps aux | grep socat | grep -v grep | wc -l) -eq 0 ]; then socat -d -d -d pty,link="/dev/ttyACM0",raw,echo=0 tcp-listen:${SOCAT_ZWAVE_PORT},reuseaddr & fi
 
 ######################################################
 
