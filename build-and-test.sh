@@ -4,7 +4,7 @@ DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 mkdir -p "${DIR}/config"
 
-TAG="homeassistant-socat:2021.1.1"
+TAG="homeassistant-socat:2021.1.4"
 
 COUNT=$( docker ps -a | grep "${TAG}" | wc -l )
 if [ "${COUNT}" == "0" ] ; then

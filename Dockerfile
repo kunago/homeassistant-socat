@@ -1,4 +1,4 @@
-FROM "homeassistant/home-assistant:2021.1.1"
+FROM "homeassistant/home-assistant:2021.1.4"
 LABEL maintainer="kunago"
 
 RUN mkdir /runwatch
